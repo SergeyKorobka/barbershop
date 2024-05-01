@@ -1,0 +1,156 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding-top: 40px;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-icon {
+  fill: #ffffff;
+}
+
+.burger-menu {
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.burger-menu-icon {
+  display: block;
+  height: 2.67px;
+  width: 100%;
+
+  background-color: #ffffff;
+  box-shadow: 0 6.67px #ffffff, 0 -6.67px #ffffff;
+}
+
+.site-nav-link,
+.contact {
+  display: block;
+  padding: 10px 0;
+
+  color: #303030;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.38;
+  letter-spacing: 0.1em;
+
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-site-nav {
+    display: none;
+  }
+  .header-contact-wrap {
+    display: none;
+  }
+  .site-nav {
+    margin-bottom: 54px;
+  }
+  .site-nav-item:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  .contact-wrap {
+    margin-bottom: 64px;
+  }
+
+  .contact {
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 34px;
+  }
+
+  .logo-icon {
+    fill: #303030;
+  }
+  .burger-menu {
+    display: none;
+  }
+
+  .site-nav {
+    margin-left: 69px;
+  }
+
+  .site-nav-list {
+    display: flex;
+  }
+
+  .site-nav-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .contact-wrap {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .site-nav-link,
+  .contact {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.33;
+  }
+  .header-btn {
+    margin-right: 4px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-inner {
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    padding-top: 9px;
+  }
+  .contact-wrap {
+    flex-direction: column-reverse;
+    padding-top: 6px;
+  }
+
+  .contact {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .site-nav {
+    padding-top: 0;
+  }
+
+  .site-nav-item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .contact {
+    margin-right: 40px;
+  }
+}

@@ -1,0 +1,128 @@
+.contacts {
+  background-image: url(../images/contacts-bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: (192dpi)),
+    (min-resolution: (2dppx)) {
+    background-image: url(../images/contacts-bg-mob@2x.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/contacts-bg-tab.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: (192dpi)),
+      (min-resolution: (2dppx)) {
+      background-image: url(../images/contacts-bg-tab@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: none;
+  }
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+
+  color: var(--title-secondary);
+  text-align: center;
+}
+
+.contacts-list {
+  margin-bottom: 44px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+
+  color: var(--secondary-text-color);
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  vertical-align: middle;
+
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contacts-icon {
+  flex-shrink: 0;
+  margin-right: 16px;
+  stroke: currentColor;
+}
+
+.address-icon {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.contacts-mail {
+  text-decoration: underline;
+}
+
+.contacts-suptitle {
+  color: var(--title-secondary);
+
+  &::before {
+    background: rgba(157, 164, 189, 0.4);
+  }
+}
+
+.contacts-time {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .time-box {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-title {
+    text-align: left;
+  }
+
+  .contacts-list {
+    max-width: 270px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    width: calc((100% - 40px) / 2);
+    padding-left: 100px;
+  }
+
+  .contacts .container {
+    padding: 0;
+  }
+
+  .contacts-list {
+    margin-bottom: 70px;
+  }
+}
